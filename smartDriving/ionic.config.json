@@ -1,0 +1,7 @@
+{
+  "name": "smartDriving",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
