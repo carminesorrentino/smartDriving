@@ -3,17 +3,20 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { IonicModule } from '@ionic/angular';
 import { HeaderStatsComponent } from './header-stats/header-stats.component';
+import { CardComponent } from './card/card.component';
 
 
 
 @NgModule({
   declarations: [
     HeaderComponent,
-    HeaderStatsComponent
+    HeaderStatsComponent,
+    CardComponent
   ],
   exports: [
     HeaderComponent,
-    HeaderStatsComponent
+    HeaderStatsComponent,
+    CardComponent
   ],
   imports: [
     CommonModule,

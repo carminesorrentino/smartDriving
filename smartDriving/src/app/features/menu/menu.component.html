@@ -1,5 +1,11 @@
 <app-header title="Menu"></app-header>
-<ion-content color="success">
-  <button class="btn btn-danger m-5">ciao</button>
+<ion-content id="menuContent">
+  
+  <app-card class="card" *ngFor="let section of menuSections"
+    [title] = 'section.title'
+    [description] = 'section.description'
+    [urlImg] = 'section.urlImg'>
+  </app-card>
+
 </ion-content>
 

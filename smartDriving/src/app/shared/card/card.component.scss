@@ -1,0 +1,19 @@
+.card{
+    background-image: url('https://www.tourtools.it/sites/www.tourtools.it/files/social/twitter/instagram_guida_alle_dimensioni_delle_immagini_2020/tw_dimensioni-immagini.jpg');
+    border: solid grey 2px;
+    border-radius: 10px;
+    height: 180px;
+}
+
+.cardTitle{
+    color: white !important;
+    font-weight: bold;
+    margin-top: 60px;
+    width: 100%;
+}
+
+.cardDescription{
+    font-size: 0.8em;
+    color: white !important;
+    overflow-y: hidden;
+}
