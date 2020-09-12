@@ -2,8 +2,9 @@
   <ion-split-pane contentId="main-content">
     <ion-menu contentId="main-content" type="overlay">
       <ion-content>
+        
         <ion-list id="inbox-list">
-          <ion-list-header color="smartDrivingApp">Inbox</ion-list-header>
+          <ion-list-header color="smartDrivingApp">Username</ion-list-header>
           <ion-note>hi@ionicframework.com</ion-note>
 
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
@@ -13,6 +14,7 @@
             </ion-item>
           </ion-menu-toggle>
         </ion-list>
+        
       </ion-content>
     </ion-menu>
     <ion-router-outlet id="main-content"></ion-router-outlet>

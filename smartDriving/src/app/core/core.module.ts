@@ -4,6 +4,7 @@ import { SidemenuComponent } from './sidemenu/sidemenu.component';
 import { IonicModule } from '@ionic/angular';
 import { RouterModule } from '@angular/router';
 import { MenuComponent } from '../features/menu/menu.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -16,6 +17,7 @@ import { MenuComponent } from '../features/menu/menu.component';
   ],
   imports: [
     CommonModule,
+    FormsModule,
     IonicModule.forRoot(),
     RouterModule.forRoot([
       { path:'',component: MenuComponent }

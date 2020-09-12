@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { EnvService } from 'src/app/service/env.service';
-import { Card } from 'src/interface/card';
+import { Section } from 'src/interface/section';
 
 @Component({
   selector: 'app-menu',
@@ -9,7 +9,7 @@ import { Card } from 'src/interface/card';
 })
 export class MenuComponent{
 
-  menuSections : Card[] = [];
+  menuSections : Section[] = [];
 
   constructor(service : EnvService){
     this.menuSections = service.menuSections;

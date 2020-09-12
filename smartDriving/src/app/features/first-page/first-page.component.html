@@ -1,0 +1,21 @@
+<ion-content fullscreen>
+
+  <div class="divTitle mt-5">
+    <h3>Benvenuto in</h3>
+    <h1>Smart Driving</h1>
+  </div>
+
+  <ion-segment (ionChange)="segmentChanged($event)">
+    <ion-segment-button value="accedi">
+      <ion-button routerDirection="root" [routerLink]="loginUrl">ACCEDI</ion-button>
+    </ion-segment-button>
+    <ion-segment-button value="registrati">
+      <ion-button routerDirection="root" [routerLink]="registrazioneUrl">REGISTRATI</ion-button>
+    </ion-segment-button>
+  </ion-segment>
+
+  <ion-content color="danger" id="content">
+      <ion-router-outlet id="content"></ion-router-outlet>
+  </ion-content>
+ 
+</ion-content>

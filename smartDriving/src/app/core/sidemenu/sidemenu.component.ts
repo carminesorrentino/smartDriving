@@ -1,50 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { Section } from 'src/interface/section';
+import { EnvService } from '../../service/env.service'
 
 @Component({
   selector: 'app-sidemenu',
   templateUrl: './sidemenu.component.html',
   styleUrls: ['./sidemenu.component.scss'],
 })
-export class SidemenuComponent implements OnInit {
+export class SidemenuComponent {
 
   public selectedIndex = 0;
-  public appPages = [
-    {
-      title: 'Sessione di guida',
-      url: '/sd/sessione',
-      icon: 'mail'
-    },
-    {
-      title: 'Profilo',
-      url: '/sd/profilo',
-      icon: 'paper-plane'
-    },
-    {
-      title: 'Shop',
-      url: '/sd/shop',
-      icon: 'heart'
-    },
-    {
-      title: 'Drive Pass',
-      url: '/sd/drivePass',
-      icon: 'archive'
-    },
-    {
-      title: 'Regolamento',
-      url: '/sd/regolamento',
-      icon: 'trash'
-    },
-  ];
+  public appPages : Section[] = [];
 
-  constructor(
-    private platform: Platform,
-    private splashScreen: SplashScreen,
-    private statusBar: StatusBar
-  ) {
+  constructor(private service : EnvService, private platform: Platform, private splashScreen: SplashScreen, private statusBar: StatusBar) {
+    this.appPages = service.menuSections;
     this.initializeApp();
   }
 
@@ -53,9 +26,6 @@ export class SidemenuComponent implements OnInit {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });
-  }
-
-  ngOnInit() {
   }
 
 }
