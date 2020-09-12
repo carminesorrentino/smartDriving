@@ -1,16 +1,9 @@
 <ion-header [translucent]="false" color="smartDrivingApp">
   <ion-toolbar>
-    <ion-title class="ion-text-center">Title</ion-title>
+    <ion-title class="ion-text-center">{{title}}</ion-title>
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-icon name="menu" slot="end" class="mr-4"></ion-icon>
+    <app-header-stats slot="end" class="mr-4"></app-header-stats>
   </ion-toolbar>
 </ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Content</ion-title>
-    </ion-toolbar>
-  </ion-header>

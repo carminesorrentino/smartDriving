@@ -15,27 +15,27 @@ export class SidemenuComponent implements OnInit {
   public appPages = [
     {
       title: 'Sessione di guida',
-      url: '/folder/Inbox',
+      url: '/sd/sessione',
       icon: 'mail'
     },
     {
       title: 'Profilo',
-      url: '/folder/Outbox',
+      url: '/sd/profilo',
       icon: 'paper-plane'
     },
     {
       title: 'Shop',
-      url: '/folder/Favorites',
+      url: '/sd/shop',
       icon: 'heart'
     },
     {
       title: 'Drive Pass',
-      url: '/folder/Archived',
+      url: '/sd/drivePass',
       icon: 'archive'
     },
     {
       title: 'Regolamento',
-      url: '/folder/Trash',
+      url: '/sd/regolamento',
       icon: 'trash'
     },
   ];
@@ -56,11 +56,6 @@ export class SidemenuComponent implements OnInit {
   }
 
   ngOnInit() {
-    const path = window.location.pathname.split('folder/')[1];
-    console.log(path);
-    if (path !== undefined) {
-      this.selectedIndex = this.appPages.findIndex(page => page.title.toLowerCase() === path.toLowerCase());
-    }
   }
 
 }

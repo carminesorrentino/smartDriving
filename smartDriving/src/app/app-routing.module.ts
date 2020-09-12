@@ -5,16 +5,31 @@ import { MenuComponent } from './features/menu/menu.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'folder/Inbox',
-    pathMatch: 'full'
+    component: MenuComponent
   },
   {
-    path: 'folder/Outbox',
+    path: 'sd/sessione',
+    component: MenuComponent
+  },
+  {
+    path: 'sd/profilo',
+    component: MenuComponent
+  },
+  {
+    path: 'sd/shop',
+    component: MenuComponent
+  },
+  {
+    path: 'sd/drivePass',
+    component: MenuComponent
+  },
+  {
+    path: 'sd/regolamento',
     component: MenuComponent
   },
   {
     path: '**',
-    redirectTo: 'folder/Outbox'
+    redirectTo: 'sd/regolamento'
   }
 ];
 
