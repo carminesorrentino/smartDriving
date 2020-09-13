@@ -32,4 +32,15 @@ export class LoginComponent implements OnInit {
     }
   }
 
+  fbLogin() {
+    //HTTP-GET-CONTROLLO
+    if(true) //if login ok
+    {
+      console.log('event emit')
+      this.logged.emit(true);
+    }else{  //caso di errore
+
+    }
+  }
+
 }
