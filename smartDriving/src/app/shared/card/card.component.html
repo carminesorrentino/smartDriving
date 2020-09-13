@@ -1,5 +1,5 @@
 <ion-card>
-  <ion-card-content class="card">
+  <ion-card-content [ngStyle]="{'background-image':'url('+urlImg+')'}" class="card">
     <ion-thumbnail class="cardTitle">{{title}}</ion-thumbnail>
     <ion-text class="cardDescription">{{description}}</ion-text>
   </ion-card-content>

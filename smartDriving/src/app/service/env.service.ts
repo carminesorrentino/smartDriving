@@ -15,36 +15,36 @@ export class EnvService {
     {
       title: 'Sessione di guida',
       description: 'Completa nuove sessioni di guida per salire di livello!',
-      urlImg: 'mail',
-      icon: 'mail',
+      urlImg: 'https://www.tourtools.it/sites/www.tourtools.it/files/social/twitter/instagram_guida_alle_dimensioni_delle_immagini_2020/tw_dimensioni-immagini.jpg',
+      icon: 'car',
       url: '/sd/sessione'
     },
     {
       title: 'Profilo',
       description: 'Osserva gli obiettivi raggiunti e gestisci il tuo garage!',
-      urlImg: 'mail',
-      icon: 'paper-plane',
+      urlImg: '../../../../profilo.jpg',
+      icon: 'person',
       url: '/sd/profilo'
     },
     {
       title: 'Shop',
       description: 'Acquista nuove skin e progetti per il tuo garage',
       urlImg: 'mail',
-      icon: 'heart',
+      icon: 'pricetags',
       url: '/sd/shop'
     },
     {
       title: 'Drive pass',
       description: 'Ottieni nuovi premi avanzando di livello',
       urlImg: 'mail',
-      icon: 'archive',
+      icon: 'trending-up',
       url: '/sd/drivePass'
     },
     {
       title: 'Regolamento',
       description: 'Scopri come guadagnare punti',
       urlImg: 'mail',
-      icon: 'trash',
+      icon: 'receipt',
       url: '/sd/regolamento'
     }
   ];

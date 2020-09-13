@@ -18,7 +18,7 @@ export class HeaderStatsComponent implements OnInit {
         message: new IonicSafeString(`
                 <ion-item>
                   <ion-label>Livello: 0/100<ion-label>
-                  <ion-img src="" alt="path in header-stats.component.ts" class="iconStats"></ion-img>
+                  <ion-icon name="cash-outline"></ion-icon>
                 </ion-item>
                 <ion-item>
                   <ion-label>ACPoint: 0<ion-label>
