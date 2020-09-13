@@ -7,6 +7,7 @@ import { ThumbnailLoadingComponent } from './thumbnail-loading/thumbnail-loading
 import { FirstPageComponent } from './first-page/first-page.component';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from '../app-routing.module';
+import { LoginComponent } from './login/login.component';
 
 
 
@@ -14,12 +15,14 @@ import { AppRoutingModule } from '../app-routing.module';
   declarations: [
     MenuComponent,
     ThumbnailLoadingComponent,
-    FirstPageComponent
+    FirstPageComponent,
+    LoginComponent
   ],
   exports: [
     MenuComponent,
     ThumbnailLoadingComponent,
-    FirstPageComponent
+    FirstPageComponent,
+    LoginComponent
   ],
   imports: [
     CommonModule,

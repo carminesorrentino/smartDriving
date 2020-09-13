@@ -6,6 +6,9 @@ import { Section } from 'src/interface/section'
 })
 export class EnvService {
 
+  loginUrl = 'sd/login';
+  registrazioneUrl = 'sd/registrazione';
+
   baseUrl = 'http://localhost:8100/'
 
   menuSections : Section[] = [

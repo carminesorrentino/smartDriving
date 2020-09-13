@@ -1,3 +1,2 @@
-<!--<app-sidemenu></app-sidemenu>-->
-<!--<app-thumbnail-loading></app-thumbnail-loading>-->
-<app-first-page></app-first-page>
+<app-sidemenu *ngIf="showMenu"></app-sidemenu>
+<app-first-page *ngIf="showLog" (showMenu)="changeView($event)"></app-first-page>

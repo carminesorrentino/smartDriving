@@ -1,10 +1,15 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { FirstPageComponent } from './features/first-page/first-page.component';
+import { LoginComponent } from './features/login/login.component';
 import { MenuComponent } from './features/menu/menu.component';
 import { ThumbnailLoadingComponent } from './features/thumbnail-loading/thumbnail-loading.component';
 
 const routes: Routes = [
+  {
+    path: '',
+    component: MenuComponent
+  },
   {
     path: 'sd/menu',
     component: MenuComponent
@@ -31,7 +36,7 @@ const routes: Routes = [
   },
   {
     path: 'sd/login',
-    component: MenuComponent
+    component: LoginComponent
   },
   {
     path: 'sd/registrazione',

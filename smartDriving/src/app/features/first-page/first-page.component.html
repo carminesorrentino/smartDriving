@@ -5,17 +5,22 @@
     <h1>Smart Driving</h1>
   </div>
 
-  <ion-segment (ionChange)="segmentChanged($event)">
-    <ion-segment-button value="accedi">
-      <ion-button routerDirection="root" [routerLink]="loginUrl">ACCEDI</ion-button>
-    </ion-segment-button>
-    <ion-segment-button value="registrati">
-      <ion-button routerDirection="root" [routerLink]="registrazioneUrl">REGISTRATI</ion-button>
-    </ion-segment-button>
-  </ion-segment>
-
-  <ion-content color="danger" id="content">
-      <ion-router-outlet id="content"></ion-router-outlet>
+  <ion-header translucent>
+    <ion-toolbar>
+      <ion-segment value="all" (ionChange)="segmentChanged($event)">
+        <ion-segment-button value="Login">
+          <ion-label>Login</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="Registrazione">
+          <ion-label>Registrazione</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <app-login *ngIf="showLogin" (logged)="checkLogin($event)"></app-login>
+    <app-thumbnail-loading *ngIf="showRegistrazione"></app-thumbnail-loading>
   </ion-content>
  
 </ion-content>
