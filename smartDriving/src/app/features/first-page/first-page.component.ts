@@ -10,6 +10,7 @@ export class FirstPageComponent{
 
   showLogin : boolean = false;
   showRegistrazione : boolean = false;
+  selectItem : string = '';
 
   @Output() showMenu : EventEmitter<boolean> = new EventEmitter();
 
@@ -18,9 +19,11 @@ export class FirstPageComponent{
   segmentChanged(ev: any) {
     console.log('Segment changed', ev.detail.value);
     if(ev.detail.value == 'Login'){
+      this.selectItem = 'Login';
       this.showLogin = true;
       this.showRegistrazione = false;
     }else if(ev.detail.value == 'Registrazione'){
+      this.selectItem = 'Registrazione';
       this.showLogin = false;
       this.showRegistrazione = true;
     }else{

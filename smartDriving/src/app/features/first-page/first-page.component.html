@@ -9,10 +9,10 @@
     <ion-toolbar>
       <ion-segment value="all" (ionChange)="segmentChanged($event)">
         <ion-segment-button value="Login">
-          <ion-label>Login</ion-label>
+          <ion-label [ngClass]=" { selectItem : selectItem == 'Login' }">Login</ion-label>
         </ion-segment-button>
         <ion-segment-button value="Registrazione">
-          <ion-label>Registrazione</ion-label>
+          <ion-label [ngClass]=" { selectItem : selectItem == 'Registrazione' }">Registrazione</ion-label>
         </ion-segment-button>
       </ion-segment>
     </ion-toolbar>
