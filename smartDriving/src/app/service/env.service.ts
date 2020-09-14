@@ -22,7 +22,7 @@ export class EnvService {
     {
       title: 'Profilo',
       description: 'Osserva gli obiettivi raggiunti e gestisci il tuo garage!',
-      urlImg: '../../../../profilo.jpg',
+      urlImg: '/assets/img/profilo.jpg',
       icon: 'person',
       url: '/sd/profilo'
     },
