@@ -1,0 +1,30 @@
+<ion-content fullscreen>
+
+  <div class="divTitle mt-5">
+    <h3>Benvenuto in</h3>
+    <h1>Smart Driving</h1>
+  </div>
+
+  <ion-header translucent>
+    <ion-toolbar>
+
+      <ion-segment value="all" (ionChange)="segmentChanged($event)" [routerLink]="this.selectURL" routerLinkActive="active"
+        [routerDirection]="this.selectURL == '/index/login' ? 'back' : 'forward'"
+      >
+
+
+        <ion-segment-button value="Login">
+          <ion-label [ngClass]=" { selectItem : selectURL == 'Login' }">Login</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="Registrazione">
+          <ion-label [ngClass]=" { selectItem : selectURL == 'Registrazione' }">Registrazione</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+    <ion-router-outlet></ion-router-outlet>
+  </ion-content>
+ 
+</ion-content>

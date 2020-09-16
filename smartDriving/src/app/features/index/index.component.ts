@@ -1,24 +1,24 @@
-import { Component, EventEmitter, Output } from '@angular/core';
-import { EnvService } from 'src/app/service/env.service';
+import { Component, Output, EventEmitter } from '@angular/core';
+import { EnvService } from '../../service/env.service'
+import { Router } from '@angular/router'
 
 @Component({
-  selector: 'app-first-page',
-  templateUrl: './first-page.component.html',
-  styleUrls: ['./first-page.component.scss'],
+  selector: 'app-index',
+  templateUrl: './index.component.html',
+  styleUrls: ['./index.component.scss'],
 })
-export class FirstPageComponent{
-
+export class IndexComponent {
   showLogin : boolean = false;
   showRegistrazione : boolean = false;
-  selectItem : string = '';
+  selectURL : string = '';
 
   @Output() showMenu : EventEmitter<boolean> = new EventEmitter();
 
-  constructor(private service : EnvService) { }
+  constructor(private service : EnvService, private router : Router) { }
 
   segmentChanged(ev: any) {
     console.log('Segment changed', ev.detail.value);
-    if(ev.detail.value == 'Login'){
+   /*if(ev.detail.value == 'Login'){
       this.selectItem = 'Login';
       this.showLogin = true;
       this.showRegistrazione = false;
@@ -29,7 +29,13 @@ export class FirstPageComponent{
     }else{
       this.showLogin = false;
       this.showRegistrazione = false;
+    }*/
+    if(ev.detail.value == 'Login'){
+      this.selectURL = '/index/login'
+    }else{
+      this.selectURL = '/index/registrazione'
     }
+    console.log('route change in index.component.ts', this.selectURL)
   }
 
   checkLogin($event){

@@ -18,7 +18,7 @@ import { FormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     FormsModule,
-    IonicModule.forRoot(),
+    IonicModule,
     RouterModule.forRoot([
       { path:'',component: MenuComponent }
     ]),
