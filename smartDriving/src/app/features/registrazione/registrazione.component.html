@@ -1,0 +1,63 @@
+<ion-card>
+  <form #form="ngForm" (ngSubmit)="submitRegistrazione(form)">
+
+    <!--Nome-->
+    <ion-item lines="inset" class="pr-4">
+      <ion-label class="mr-3">Nome</ion-label>
+      <ion-input type="text" [ngModel]=user?.nome name="nome" autofocus required clear-input placeholder="Mario"></ion-input>
+    </ion-item>
+
+    <!--Cognome-->
+    <ion-item lines="inset" class="pr-4">
+      <ion-label class="mr-3">Cognome</ion-label>
+      <ion-input type="text" [ngModel]=user?.cognome name="cognome" autofocus required clear-input placeholder="Rossi"></ion-input>
+    </ion-item>
+
+    <!--Username-->
+    <ion-item lines="inset" class="pr-4">
+      <ion-label class="mr-3">Username</ion-label>
+      <ion-input type="text" [ngModel]=user?.username name="username" autofocus required clear-input placeholder="mariorossi"></ion-input>
+    </ion-item>
+
+    <!--Regione-->
+    <ion-item lines="inset" class="pr-4">
+      <ion-label>Regione</ion-label>
+        <ion-select value="1996">
+          <ion-select-option value="1989" [ngStyle]="{'--color': 'white !important'}">1989</ion-select-option>
+          <ion-select-option value="1990">1990</ion-select-option>
+          <ion-select-option value="1991">1991</ion-select-option>
+          <ion-select-option value="1992">1992</ion-select-option>
+          <ion-select-option value="1993">1993</ion-select-option>
+          <ion-select-option value="1994">1994</ion-select-option>
+          <ion-select-option value="1995">1995</ion-select-option>
+          <ion-select-option value="1996">1996</ion-select-option>
+          <ion-select-option value="1997">1997</ion-select-option>
+          <ion-select-option value="1998">1998</ion-select-option>
+          <ion-select-option value="1999">1999</ion-select-option>
+        </ion-select>
+    </ion-item>
+
+    <!--Città-->
+    <ion-item lines="inset" class="pr-4" disabled>
+      <ion-label>Città</ion-label>
+          <ion-select class="mr-3">
+            <ion-select-option value="f">Female</ion-select-option>
+            <ion-select-option value="m">Male</ion-select-option>
+          </ion-select>
+    </ion-item>
+
+    <!--Password-->
+    <ion-item lines="inset" class="pr-4">
+      <ion-label class="mr-3">Password</ion-label>
+      <ion-input type="password" [ngModel]=user?.password name="password" required clear-input placeholder="****"></ion-input>
+    </ion-item>
+
+    <!--Conferma password-->
+    <ion-item lines="inset" class="pr-4">
+      <ion-label class="mr-3">Conferma password</ion-label>
+      <ion-input type="password" [ngModel]=user?.password name="password" required clear-input placeholder="****"></ion-input>
+    </ion-item>
+    
+    <ion-button type="submit" size="default" mode='ios' fill="solid" class="m-3" block expand="full" [disabled]=form.invalid>Login</ion-button>
+  </form>
+</ion-card>

@@ -18,18 +18,6 @@ export class IndexComponent {
 
   segmentChanged(ev: any) {
     console.log('Segment changed', ev.detail.value);
-   /*if(ev.detail.value == 'Login'){
-      this.selectItem = 'Login';
-      this.showLogin = true;
-      this.showRegistrazione = false;
-    }else if(ev.detail.value == 'Registrazione'){
-      this.selectItem = 'Registrazione';
-      this.showLogin = false;
-      this.showRegistrazione = true;
-    }else{
-      this.showLogin = false;
-      this.showRegistrazione = false;
-    }*/
     if(ev.detail.value == 'Login'){
       this.selectURL = '/index/login'
     }else{

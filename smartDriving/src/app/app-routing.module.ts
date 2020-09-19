@@ -14,8 +14,6 @@ const routes: Routes = [
   { path: 'sd/shop', component: MenuComponent },
   { path: 'sd/drivePass', component: MenuComponent },
   { path: 'sd/regolamento', component: MenuComponent },
-  { path: 'sd/login', component: LoginComponent },
-  { path: 'sd/registrazione', component: ThumbnailLoadingComponent },
   { path: '**', redirectTo:"index" }
 ];
 
